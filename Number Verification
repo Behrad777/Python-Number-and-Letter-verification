@@ -1,0 +1,31 @@
+
+def number_checker(x):
+    s=0
+    n=0
+    minuses = 0
+    decimals = 0
+    while s==0: 
+        for i in range(len(x)):
+            if x[i] in numbers:
+                n=n+1
+                pass
+            elif x[i] == "-":
+                n=n+1
+                minuses = minuses+1
+            elif x[i] == ".":
+                n=n+1
+                decimals = decimals+1
+            elif minuses == 2 or decimals == 2:
+                x = input("Lets try that again: ")
+                n=0
+                break
+            else:
+                x = input("Lets try that again: ")
+                n=0
+                minuses = 0
+                decimals = 0
+                break
+            if n == len(x):
+                s=1
+                break  
+    return x
