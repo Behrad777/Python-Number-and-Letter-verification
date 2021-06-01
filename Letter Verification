@@ -1,0 +1,16 @@
+def letter_checker(x):
+    s=0
+    while s==0: 
+        n=0
+        for i in range(len(x)):
+            if x[i] in letters:
+                pass
+                n = n + 1
+            else:
+                x = input("Your input was not all letters, please try again: ")
+                n=0
+                break
+            if n == len(x):
+                s=1
+                break  
+    return x 
